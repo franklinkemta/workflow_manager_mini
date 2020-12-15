@@ -6,9 +6,13 @@ const initialState = {};
 
 const middleware = [thunk];
 
+// Disable the redux extension when we are not in dev
+// const devTools = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__() : null
+
+
 const store = createStore(rootReducer, initialState, compose(
     applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), // Only For Dev
+    // devTools // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), // Only For Dev
 ));
 
 export default store;
