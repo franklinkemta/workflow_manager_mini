@@ -1,6 +1,7 @@
 ### WORKFLOW MANAGER MINI PROJECT - MONK AI
 
 ## README
+Front Rôle interview Mini project
 
 ## How to run this api
 # create a virtual env if it does not exist
